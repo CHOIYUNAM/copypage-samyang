@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>삼양식품</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+	type="text/javascript"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+	rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico">
+<style media="screen">
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Nanum Gothic", sans-serif;
+}
+
+#wrap {
+	width: 100%;
+	max-width: 1680px;
+	min-width: 1680px;
+	height: auto;
+	margin: 0 auto;
+}
+
+#header {
+	width: 100%;
+	height: 50px;
+	background-color: #f4f4f6;
+	border-top: 5px solid #ff6a00;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	box-sizing: border-box;
+}
+
+#header .copy {
+	height: 100%;
+	width: 400px;
+	margin-left: 262px;
+	display: flex;
+	line-height: 50px;
+}
+
+#header h5 {
+	color: gray;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+#header h4 {
+	color: black;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+#header .snsbox {
+	width: auto;
+	height: 100%;
+	margin-right: 262px;
+	line-height: 50px;
+}
+
+#header .snsbox img {
+	margin-left: 17px;
+	cursor: pointer;
+}
+
+#header .snsbox .gifbox {
+	margin-left: 40px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+#header .snsbox .irbox {
+	width: 32px;
+	height: 23px;
+	border: 0.5px solid silver;
+	background-color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	float: right;
+	font-size: 12px;
+	line-height: 23px;
+	text-align: center;
+	margin-left: 8px;
+	margin-top: 9px;
+	font-weight: 600;
+	color: #464646;
+}
+
+#header .snsbox .peoplebox {
+	width: 65px;
+	height: 23px;
+	border: 0.5px solid silver;
+	background-color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	float: right;
+	font-size: 12px;
+	line-height: 23px;
+	text-align: center;
+	margin-left: 8px;
+	margin-top: 9px;
+	font-weight: 600;
+	color: #464646;
+}
+
+#header .snsbox .korbox {
+	background-color: #f4f4f6;
+	height: 23px;
+	border: 0.5px solid silver;
+	float: right;
+	margin-left: 8px;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-top: 9px;
+	color: #939393;
+	cursor: pointer;
+}
+
+#menubar {
+	width: 100%;
+	height: 93px;
+	background-color: white;
+	position: relative;
+}
+
+#menubar .logobox {
+	margin-left: 262px;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+}
+
+#menubar .menuli {
+	width: 710px;
+	height: 87px;
+	margin-right: 262px;
+	float: right;
+	display: flex;
+	justify-content: space-between;
+	line-height: 87px;
+	font-weight: bold;
+}
+
+#menubar .menuli li {
+	list-style: none;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+#menubar .submenu_wrap {
+	width: 100%;
+	height: 250px;
+	z-index: 100;
+	position: absolute;
+	top: 93px;
+	background-color: white;
+	border-top: 0.5px solid #b6b6b6;
+	border-bottom: 1px solid rgb(70, 70, 70);
+	display: none;
+}
+
+#menubar .submenu_wrap .submenu {
+	display: flex;
+	margin-left: 650px;
+}
+
+#menubar .submenu_wrap .submenu ul {
+	margin-top: 30px;
+	width: 160px;
+	text-align: center;
+	font-size: 15px;
+	color: #6c6c6c;
+}
+
+#menubar .submenu_wrap .submenu ul li {
+	list-style: none;
+	width: 100%;
+	height: 40px;
+	cursor: pointer;
+}
+
+#nav {
+	width: 100%;
+	height: 575px;
+	position: relative;
+	overflow: hidden;
+}
+
+#nav .nav_slide {
+	width: 700%;
+	height: 100%;
+	position: absolute;
+	cursor: pointer;
+}
+
+#nav .nav_slide li {
+	list-style: none;
+}
+
+#nav .nav_slide li img {
+	float: left;
+	width: calc(100%/ 7);
+	height: auto;
+}
+
+#nav .bt1 {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 162px;
+	cursor: pointer;
+}
+
+#nav .bt2 {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 162px;
+	cursor: pointer;
+}
+
+#nav .f_box {
+	width: 115px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: space-between;
+	bottom: 100px;
+	cursor: pointer;
+}
+
+#nav .f_box .fbt {
+	width: 12px;
+	height: 12px;
+	border-radius: 10px;
+	background-color: rgba(93, 93, 93, 0.5);
+}
+
+#section {
+	width: 100%;
+	height: 500px;
+	background-image: url("img/bg_product_tab01.jpg");
+	position: relative;
+}
+
+#section .s_lslide {
+	width: 212px;
+	height: 100%;
+	position: absolute;
+	left: 262px;
+}
+
+#section .s_lslide .sbg {
+	z-index: 99;
+	margin-top: 50px;
+}
+
+#section .s_lslide .sboxbox {
+	width: 177px;
+	height: 177px;
+	position: absolute;
+	top: 139px;
+	left: 37px;
+	overflow: hidden;
+}
+
+#section .s_lslide .sslidebox {
+	z-index: 100;
+	width: 350%;
+	position: absolute;
+}
+
+#section .s_lslide .sslidebox img {
+	float: left;
+	cursor: pointer;
+}
+
+#section .s_lslide .sslidebtbox {
+	position: absolute;
+	top: 69px;
+	right: 0;
+}
+
+#section .s_lslide .sslidebtbox li {
+	list-style: none;
+	float: left;
+	margin-left: 5px;
+	cursor: pointer;
+	width: 12px;
+	height: 12px;
+	border-radius: 10px;
+	background-color: rgba(93, 93, 93, 0.5);
+}
+
+#section .s_center {
+	width: 384px;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#section .s_center h1 {
+	font-size: 40px;
+	font-weight: 800;
+	text-align: center;
+	padding-top: 65px;
+}
+
+#section .s_center h3 {
+	font-size: 20px;
+	font-weight: 200;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+
+#section .s_center h2 {
+	font-size: 25px;
+	font-weight: 200;
+	text-align: center;
+}
+
+#section .centerbox {
+	position: relative;
+	width: 365px;
+	height: 175px;
+}
+
+#section .centerbox .cenbox_text {
+	width: 100%;
+	display: flex;
+	font-size: 14px;
+	font-weight: 200;
+	justify-content: space-around;
+	margin-top: 65px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#section .centerbox .cenbox_img {
+	width: 365px;
+	height: 79px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	margin-top: 10px;
+	display: flex;
+}
+
+#section .centerbox .cenbox_img .cimgbox1 {
+	width: 80px;
+	position: absolute;
+}
+
+#section .centerbox .cenbox_img .cimgbox2 {
+	width: 80px;
+	position: absolute;
+	left: 90px;
+}
+
+#section .centerbox .cenbox_img .cimgbox3 {
+	width: 80px;
+	position: absolute;
+	left: 180px;
+}
+
+#section .centerbox .cenbox_img .cimgbox4 {
+	width: 80px;
+	position: absolute;
+	left: 270px;
+}
+
+#section .centerbox .cenbox_img img {
+	width: 80px;
+	cursor: pointer;
+}
+
+#aside {
+	width: 100%;
+	height: 420px;
+	position: relative;
+	margin-top: 40px;
+	overflow: hidden;
+}
+
+#aside .asblock {
+	width: 145%;
+	height: 60%;
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+}
+
+#aside .asbox {
+	width: calc(100%/ 10);
+	text-align: center;
+}
+
+#aside .asbox .asimg {
+	cursor: pointer;
+}
+
+#aside .asbox .astext {
+	text-align: center;
+	cursor: pointer;
+}
+
+#aside .asbox .astext h2 {
+	font-size: 14px;
+	margin-top: 10px;
+	color: #939393;
+	font-weight: 500;
+}
+
+#aside .asbox .astext h1 {
+	font-size: 16px;
+	color: #464646;
+	margin-top: 10px;
+}
+
+#aside .asbtbox {
+	width: 95px;
+	height: 30px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 130px;
+	display: flex;
+	justify-content: space-around;
+	cursor: pointer;
+}
+
+#aside .asbtbox li {
+	list-style: none;
+	width: 12px;
+	height: 12px;
+	border-radius: 10px;
+	background-color: rgba(93, 93, 93, 0.5);
+}
+
+#aside .opbox {
+	height: 100%;
+	width: 250px;
+	z-index: 100;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+#aside .opbox:nth-child(2) {
+	right: 0;
+}
+
+#content {
+	width: 100%;
+	height: 1100px;
+	background-color: #feebd1;
+}
+
+#content h1 {
+	font-size: 40px;
+	font-weight: 800;
+	padding-top: 70px;
+	text-align: center;
+}
+
+#content h2 {
+	font-size: 25px;
+	font-weight: 100;
+	padding-top: 10px;
+	padding-bottom: 45px;
+	text-align: center;
+}
+
+#content .iconbox {
+	width: 355px;
+	height: 76px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+#content .boxs {
+	width: 1140px;
+	height: 800px;
+	margin: 48px auto;
+	display: grid;
+	grid-template-columns: 312px 475px 312px;
+	grid-template-rows: 198px 198px 198px;
+	gap: 20px 20px;
+	grid-template-areas: "item_1 item_2 item_3" "item_4 item_2 item_5"
+		"item_4 item_6 item_7"
+}
+
+#content .boxs .item_1 {
+	grid-area: item_1;
+	background-color: white;
+}
+
+#content .boxs .item_2 {
+	grid-area: item_2;
+	background-image: url('img/gridbox1.png');
+}
+
+#content .boxs .item_2 h3 {
+	color: white;
+	font-size: 25px;
+	margin-top: 20px;
+	margin-left: 35px;
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+#content .boxs .item_2 h4 {
+	color: white;
+	font-size: 15px;
+	margin-left: 35px;
+	font-weight: 200;
+}
+
+#content .boxs .item_2 .bt {
+	width: 100px;
+	height: 30px;
+	font-size: 13px;
+	border-radius: 200px;
+	background-color: #d55c12;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 35px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+#content .boxs .item_3 {
+	grid-area: item_3;
+	background-image: url('img/gridbox4.png');
+}
+
+#content .boxs .item_3 h3 {
+	color: white;
+	font-size: 25px;
+	margin-top: 20px;
+	margin-left: 35px;
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+#content .boxs .item_3 h4 {
+	color: white;
+	font-size: 15px;
+	margin-left: 35px;
+	font-weight: 200;
+}
+
+#content .boxs .item_3 .bt {
+	width: 100px;
+	height: 30px;
+	font-size: 13px;
+	border-radius: 200px;
+	background-color: #42afd7;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 35px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+#content .boxs .item_4 {
+	grid-area: item_4;
+	background-color: rgb(194, 211, 250);
+	position: relative;
+	overflow: hidden;
+}
+
+#content .boxs .item_4 .itemslide {
+	width: 300%;
+	height: 100%;
+	position: absolute;
+}
+
+#content .boxs .item_4 .itemslide li {
+	list-style: none;
+	float: left;
+	cursor: pointer;
+}
+
+#content .boxs .item_4 .itemslide li img {
+	width: 312px;
+	height: auto;
+}
+
+#content .boxs .item_4 .itsbox {
+	width: 55px;
+	height: 20px;
+	position: absolute;
+	right: 40px;
+	top: 40px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-around;
+}
+
+#content .boxs .item_4 .itsbox li {
+	list-style: none;
+	width: 13px;
+	height: 13px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#content .boxs .item_5 {
+	grid-area: item_5;
+	background-color: white;
+	position: relative;
+}
+
+#content .boxs .item_5 h3 {
+	color: black;
+	font-size: 25px;
+	margin-top: 20px;
+	margin-left: 35px;
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+#content .boxs .item_5 h4 {
+	color: black;
+	font-size: 15px;
+	margin-left: 35px;
+	font-weight: 200;
+}
+
+#content .boxs .item_5 h5 {
+	color: gray;
+	font-size: 11px;
+	margin-left: 35px;
+	margin-top: 20px;
+}
+
+#content .boxs .item_5 .btn_noti {
+	position: absolute;
+	top: 35px;
+	right: 25px;
+	cursor: pointer;
+}
+
+#content .boxs .item_6 {
+	grid-area: item_6;
+	background-image: url('img/gridbox2.png');
+}
+
+#content .boxs .item_6 h3 {
+	color: white;
+	font-size: 25px;
+	margin-top: 20px;
+	margin-left: 35px;
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+#content .boxs .item_6 h4 {
+	color: white;
+	font-size: 15px;
+	margin-left: 35px;
+	font-weight: 200;
+}
+
+#content .boxs .item_6 .bt {
+	width: 100px;
+	height: 30px;
+	font-size: 13px;
+	border-radius: 200px;
+	background-color: #5da91b;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 35px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+#content .boxs .item_7 {
+	grid-area: item_7;
+	background-image: url('img/gridbox3.png');
+}
+
+#content .boxs .item_7 h3 {
+	color: white;
+	font-size: 25px;
+	margin-top: 20px;
+	margin-left: 35px;
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+#content .boxs .item_7 h4 {
+	color: white;
+	font-size: 15px;
+	margin-left: 35px;
+	font-weight: 200;
+}
+
+#content .boxs .item_7 .bt {
+	width: 100px;
+	height: 30px;
+	font-size: 13px;
+	border-radius: 200px;
+	background-color: #a66dd8;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 35px;
+	margin-top: 50px;
+	cursor: pointer;
+}
+
+#footer {
+	width: 100%;
+	height: 218px;
+	display: flex;
+}
+
+#footer .fobox1 {
+	width: 127px;
+	height: 100%;
+	background-color: white;
+	margin-left: 262px;
+}
+
+#footer .fobox1 img {
+	margin-top: 52px;
+	cursor: pointer;
+}
+
+#footer .fobox2 {
+	width: 486px;
+	height: 100%;
+	margin-left: 50px;
+}
+
+#footer .fobox2 .foboxbox1 {
+	width: 100%;
+	height: 20px;
+	margin-top: 45px;
+}
+
+#footer .fobox2 .foboxbox1 ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+#footer .fobox2 .foboxbox1 ul li {
+	list-style: none;
+	font-size: 14px;
+	color: #707066;
+	cursor: pointer;
+}
+
+#footer .fobox2 .foboxbox1 ul li:nth-child(6) {
+	color: #666666;
+	font-weight: bold;
+}
+
+#footer .fobox2 .foboxbox2 {
+	width: 100%;
+	height: 139px;
+	margin-top: 25px;
+	font-size: 11px;
+	color: #a39999;
+}
+
+#footer .fobox2 .foboxbox2 h5 {
+	font-size: 11px;
+	color: #c1c1c1;
+}
+
+#footer .fobox3 {
+	width: 148px;
+	height: 100%;
+	margin-left: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#footer .fobox3 li {
+	list-style: none;
+	margin-top: 45px;
+	cursor: pointer;
+}
+
+#footer .fobox4 {
+	width: 242px;
+	height: 100%;
+	margin-left: 35px;
+}
+
+#footer .fobox4 .fobox4se {
+	width: 100%;
+	height: 39px;
+	border: 1px solid gray;
+	background-color: white;
+	margin-top: 40px;
+	cursor: pointer;
+}
+
+#footer .fobox4 img {
+	margin-top: 5px;
+}
+</style>
+</head>
+<body>
+
+	<div id="wrap">
+
+		<header id="header">
+			<div class="copy">
+				<h5>행복과 사랑이 넘치는</h5>
+				&nbsp;
+				<h4>삼양식품</h4>
+				&nbsp;
+				<h5>입니다.</h5>
+			</div>
+			<div class="snsbox">
+				<img src="img/ico_sns_blog.png" alt=""> <img
+					src="img/ico_sns_insta.png" alt=""> <img
+					src="img/ico_sns_twitter.png" alt=""> <img
+					src="img/ico_sns_facebook.png" alt=""> <img class="gifbox"
+					src="img/gnb_shop.gif" alt=""> <select class="korbox"
+					name="korbox">
+					<option value="KOR">KOR</option>
+					<option value="ENG">ENG</option>
+					<option value="CHN">CHN</option>
+				</select>
+				<div class="peoplebox">인재채용</div>
+				<div class="irbox">IR</div>
+			</div>
+		</header>
+
+		<div id="menubar">
+			<div class="logobox">
+				<img src="img/logo.png" alt="">
+			</div>
+			<ul class="menuli">
+				<li class="menulili">브랜드</li>
+				<li class="menulili">제품</li>
+				<li class="menulili">홍보관</li>
+				<li class="menulili">커뮤니티</li>
+				<li class="menulili">회사소개</li>
+			</ul>
+			<div class="submenu_wrap">
+				<div class="submenu">
+					<ul class="sub1">
+						<li>삼양라면</li>
+						<li>불닭볶음면</li>
+						<li>짜짜로니</li>
+						<li>별뽀빠이</li>
+						<li>삼양유기농우유</li>
+					</ul>
+					<ul class="sub2">
+						<li>라면</li>
+						<li>스낵</li>
+						<li>유제품</li>
+						<li>소스 · 간편식</li>
+					</ul>
+					<ul class="sub3">
+						<li>보도자료</li>
+						<li>홍보영상</li>
+						<li>광고영상</li>
+						<li>호치와 친구들</li>
+						<li>삼양역사관</li>
+					</ul>
+					<ul class="sub4">
+						<li>공지사항</li>
+						<li>이벤트</li>
+						<li>FAQ</li>
+						<li>고객문의</li>
+						<li>삼양 사연</li>
+					</ul>
+					<ul class="sub5">
+						<li>삼양식품</li>
+						<li>계열사</li>
+						<li>공장</li>
+						<li>사회공헌</li>
+						<li>오시는길</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<nav id="nav">
+			<div class="nav_slide">
+				<li><img src="img/bn1.jpg" alt=""></li>
+				<li><img src="img/bn2.jpg" alt=""></li>
+				<li><img src="img/bn4.jpg" alt=""></li>
+				<li><img src="img/bn5.jpg" alt=""></li>
+				<li><img src="img/bn6.jpg" alt=""></li>
+				<li><img src="img/bn7.jpg" alt=""></li>
+				<li><img src="img/bn8.jpg" alt=""></li>
+			</div>
+			<div class="bt1">
+				<img src="img/btn_slide_prev.png" alt="">
+			</div>
+			<div class="bt2">
+				<img src="img/btn_slide_next.png" alt="">
+			</div>
+			<div class="f_box">
+				<div class="fbt"></div>
+				<div class="fbt"></div>
+				<div class="fbt"></div>
+				<div class="fbt"></div>
+				<div class="fbt"></div>
+				<div class="fbt"></div>
+				<div class="fbt"></div>
+			</div>
+		</nav>
+
+		<section id="section">
+			<div class="s_lslide">
+				<img class="sbg" src="img/product_new_bg.png" alt="">
+				<div class="sboxbox">
+					<div class="sslidebox">
+						<img class="s1" src="img/s_slide1.png" alt=""> <img class="s2"
+							src="img/s_slide2.png" alt=""> <img class="s3"
+							src="img/s_slide3.png" alt="">
+					</div>
+				</div>
+				<div class="sslidebtbox">
+					<li class=sslbt></li>
+					<li class=sslbt></li>
+					<li class=sslbt></li>
+				</div>
+			</div>
+			<div class="s_center">
+				<h1>삼양 제품소개</h1>
+				<h3>Delicious Together!</h3>
+				<h2>다양한 제품을</h2>
+				<h2>한곳에서 즐기세요!</h2>
+				<div class="centerbox">
+					<div class="cenbox_text">
+						<h4>라면</h4>
+						<h4>스낵</h4>
+						<h4>유제품</h4>
+						<h4>소스·간편식</h4>
+					</div>
+					<div class="cenbox_img">
+						<div class="cimgbox1">
+							<img class="cboximg img1" src="img/product_tab1.png" alt="">
+						</div>
+						<div class="cimgbox2">
+							<img class="cboximg img2" src="img/product_tab2.png" alt="">
+						</div>
+						<div class="cimgbox3">
+							<img class="cboximg img3" src="img/product_tab3.png" alt="">
+						</div>
+						<div class="cimgbox4">
+							<img class="cboximg img4" src="img/product_tab4.png" alt="">
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<aside id="aside">
+			<div class="asblock">
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide1.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>초깔끔한 매운맛!</h2>
+						<h1>김치불닭볶음면</h1>
+					</div>
+				</div>
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide2.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>크림에 빠져 더욱 부드러워진~</h2>
+						<h1>크림까르보불닭볶음면</h1>
+					</div>
+				</div>
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide3.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>크림에 빠져 더욱 부드러워진~</h2>
+						<h1>큰컵 크림까르보불닭볶음면</h1>
+					</div>
+				</div>
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide4.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>숯불향 더한 바비큐치킨맛 볶음면</h2>
+						<h1>치킨이타고있어요</h1>
+					</div>
+				</div>
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide5.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>시원하게 비벼먹는 불닭!</h2>
+						<h1>도전! 불닭비빔면</h1>
+					</div>
+				</div>
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide6.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>청양고추의 매운맛에 참깨로 고소한 풍미를 더한 비빔면</h2>
+						<h1>불타는 고추비빔면</h1>
+					</div>
+				</div>
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide7.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>더 새콤달콤한 맛으로 돌아온</h2>
+						<h1>열무비빔면</h1>
+					</div>
+				</div>
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide8.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>추운 겨울에 어울리는 화끈한 불맛 짬뽕</h2>
+						<h1>불타는 고추 짬뽕</h1>
+					</div>
+				</div>
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide9.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>미트 스파게티와 불닭의 화끈한 케미</h2>
+						<h1>미트스파게티 불닭볶음면</h1>
+					</div>
+				</div>
+				<div class="asbox">
+					<div class="asimg">
+						<img src="img/s_slide10.png" alt="">
+					</div>
+					<div class="astext">
+						<h2>미트 스파게티와 불닭의 화끈한 케미</h2>
+						<h1>큰컵 미트스파게티 불닭볶음면</h1>
+					</div>
+				</div>
+			</div>
+			<div class="opbox"></div>
+			<div class="opbox"></div>
+			<div class="asbtbox">
+				<li class="asbt"></li>
+				<li class="asbt"></li>
+				<li class="asbt"></li>
+				<li class="asbt"></li>
+			</div>
+		</aside>
+
+		<div id="content">
+			<h1>삼양 커뮤니티</h1>
+			<h2>삼양식품은 여러분과 함께 맛있는 세상을 만들어갑니다.</h2>
+			<div class="iconbox">
+				<img src="img/ico_facebook.png" alt=""> <img src="img/ico_insta.png"
+					alt=""> <img src="img/ico_blog.png" alt=""> <img
+					src="img/ico_twitter.png" alt="">
+			</div>
+			<div class="boxs">
+				<div class="item_1">
+					<iframe
+						src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsamyangfoods%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=229602793717353"
+						width="100%" height="100%" style="border: none; overflow: hidden"
+						scrolling="yes" frameborder="0" allowTransparency="true"
+						allow="encrypted-media"></iframe>
+				</div>
+				<div class="item_2">
+					<h3>홍보영상</h3>
+					<h4>삼양식품의 다채로운 스토리를</h4>
+					<h4>영상으로 보여드립니다.</h4>
+					<div class="bt">자세히 보기</div>
+				</div>
+				<div class="item_3">
+					<h3>맛있는 나눔</h3>
+					<h4>모두가 행복한 맛있는 세상</h4>
+					<div class="bt">자세히 보기</div>
+				</div>
+				<div class="item_4">
+					<div class="itemslide">
+						<li><img src="img/its1.jpg" alt=""></li>
+						<li><img src="img/its2.jpg" alt=""></li>
+						<li><img src="img/its3.jpg" alt=""></li>
+					</div>
+					<div class="itsbox">
+						<li class="itsbt"></li>
+						<li class="itsbt"></li>
+						<li class="itsbt"></li>
+					</div>
+				</div>
+				<div class="item_5">
+					<h3>공지사항</h3>
+					<h4>삼양사연 이벤트 참여하시고 선물 받아</h4>
+					<h4>가세요!</h4>
+					<h5>2019.03.28</h5>
+					<div class="btn_noti">
+						<img src="img/btn_notice.png" alt="">
+					</div>
+				</div>
+				<div class="item_6">
+					<h3>삼양 사연</h3>
+					<h4>삼양식품과 함께한</h4>
+					<h4>여러분의 다양한 사연을 기다립니다.</h4>
+					<div class="bt">자세히 보기</div>
+				</div>
+				<div class="item_7">
+					<h3>삼양 맛샵 오픈</h3>
+					<h4>삼양식품의 다양한 제품을 만나보세요.</h4>
+					<div class="bt">자세히 보기</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="footer">
+			<div class="fobox1">
+				<img src="img/footerlogo.png" alt="">
+			</div>
+			<div class="fobox2">
+				<div class="foboxbox1">
+					<ul>
+						<li>회사소개 ｜</li>
+						<li>고객지원 ｜</li>
+						<li>IR ｜</li>
+						<li>인재채용 ｜</li>
+						<li>찾아오시는 길 ｜</li>
+						<li>개인정보처리방침</li>
+					</ul>
+				</div>
+				<div class="foboxbox2">
+					서울특별시 성북구 오패산로3길 104(하월곡동)I Tel.02-940-3000I Fax.02-942-4350<br>
+					※ 고객지원센터:080-940-3333 (무료상담전화) 상담시간 (평일)오전9시-오후6시[점심시간:오후12시-1시]<br>
+					※ 수출문의<br>
+					중화권(ost1@samyangfoods.com)/아시아(ost2@samyangfoods.com)<br>
+					미주,오세아니아(ost3@samyangfoods.com)/유럽,중동,아프리카(ost4@samyangfoods.com)<br>
+					동남아시아(ost5@samyangfoods.com)
+					<h5>Copyright ⓒ 2016 Samyangfoods.All rightsreserved.</h5>
+
+				</div>
+			</div>
+			<div class="fobox3">
+				<li class="foboximg"><img src="img/ico_sns_blog2.png" alt=""></li>
+				<li class="foboximg"><img src="img/ico_sns_insta2.png" alt=""></li>
+				<li class="foboximg"><img src="img/ico_sns_twitter2.png" alt=""></li>
+				<li class="foboximg"><img src="img/ico_sns_facebook2.png" alt=""></li>
+			</div>
+			<div class="fobox4">
+				<select class="fobox4se" name="Family Site">
+					<option value="s_m">삼양맛샵</option>
+					<option value="s_f">삼양목장</option>
+					<option value="s_h">호면당</option>
+					<option value="s_i">삼양냉동</option>
+					<option value="j_m">제주우유</option>
+				</select> <img src="img/award_2017.jpg" alt="">
+			</div>
+		</footer>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var slide_px = -1680;
+		var bgc = setInterval(slide_event, 2500);
+		var slide_count = 0;
+		var fbt = document.getElementsByClassName('fbt');
+
+		slide_event()
+
+		$(".bt2").click(function() {
+			if (slide_count < 6) {
+				slide_count++;
+				slide_event()
+			}
+		});
+		$(".bt1").click(function() {
+			if (slide_count > 0) {
+				slide_count--;
+				slide_event()
+			}
+		});
+
+		function slide_event() {
+			point_all_gray();
+			$(fbt[slide_count]).css({
+				'background-color' : "#ff6900",
+				'width' : "20px"
+			});
+			if (slide_count == 0) {
+				$(".nav_slide").stop().animate({
+					left : slide_px * slide_count
+				}, 500);
+			} else if (slide_count == 1) {
+				$(".nav_slide").stop().animate({
+					left : slide_px * slide_count
+				}, 500);
+			} else if (slide_count == 2) {
+				$(".nav_slide").stop().animate({
+					left : slide_px * slide_count
+				}, 500);
+			} else if (slide_count == 3) {
+				$(".nav_slide").stop().animate({
+					left : slide_px * slide_count
+				}, 500);
+			} else if (slide_count == 4) {
+				$(".nav_slide").stop().animate({
+					left : slide_px * slide_count
+				}, 500);
+			} else if (slide_count == 5) {
+				$(".nav_slide").stop().animate({
+					left : slide_px * slide_count
+				}, 500);
+			} else if (slide_count == 6) {
+				$(".nav_slide").stop().animate({
+					left : slide_px * slide_count
+				}, 500);
+				slide_count = -1;
+			}
+			slide_count++;
+		}
+
+		function point_all_gray() {
+			$(fbt[0]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+			$(fbt[1]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+			$(fbt[2]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+			$(fbt[3]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+			$(fbt[4]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+			$(fbt[5]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+			$(fbt[6]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				"width" : "12px"
+			});
+		}
+
+		$(fbt[0]).click(function() {
+			slide_count = 0;
+			slide_event();
+		});
+		$(fbt[1]).click(function() {
+			slide_event();
+		});
+		$(fbt[2]).click(function() {
+			slide_event();
+		});
+		$(fbt[3]).click(function() {
+			slide_event();
+		});
+		$(fbt[4]).click(function() {
+			slide_event();
+		});
+		$(fbt[5]).click(function() {
+			slide_event();
+		});
+		$(fbt[6]).click(function() {
+			slide_event();
+		});
+
+		var s_slide_px = -177;
+		var sbgc = setInterval(s_slide_event, 2500);
+		var sbt = document.getElementsByClassName('sslbt');
+		var s_slide_count = 0;
+
+		s_slide_event()
+
+		function s_slide_event() {
+			point_all_orange();
+			$(sbt[s_slide_count]).css({
+				'background-color' : "#ff6900"
+			});
+			if (s_slide_count == 0) {
+				$(".sslidebox").stop().animate({
+					left : s_slide_px * s_slide_count
+				}, 500);
+			} else if (s_slide_count == 1) {
+				$(".sslidebox").stop().animate({
+					left : s_slide_px * s_slide_count
+				}, 500);
+			} else if (s_slide_count == 2) {
+				$(".sslidebox").stop().animate({
+					left : s_slide_px * s_slide_count
+				}, 500);
+				s_slide_count = -1;
+			}
+			s_slide_count++;
+		}
+
+		function point_all_orange() {
+			$(sbt[0]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)"
+			});
+			$(sbt[1]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)"
+			});
+			$(sbt[2]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)"
+			});
+		}
+		;
+
+		$(sbt[0]).click(function() {
+			s_slide_count = 0;
+			s_slide_event();
+		});
+		$(sbt[1]).click(function() {
+			s_slide_event();
+		});
+		$(sbt[2]).click(function() {
+			s_slide_event();
+		});
+
+		var cbt = document.getElementsByClassName('cboximg');
+
+		$(cbt[0]).mouseover(function() {
+			$(cbt[0]).attr('src', 'img/product_tab1_2.png');
+		});
+		$(cbt[0]).mouseout(function() {
+			$(cbt[0]).attr('src', 'img/product_tab1.png');
+		});
+
+		$(cbt[1]).mouseover(function() {
+			$(cbt[1]).attr('src', 'img/product_tab2_2.png');
+		});
+		$(cbt[1]).mouseout(function() {
+			$(cbt[1]).attr('src', 'img/product_tab2.png');
+		});
+
+		$(cbt[2]).mouseover(function() {
+			$(cbt[2]).attr('src', 'img/product_tab3_2.png');
+		});
+		$(cbt[2]).mouseout(function() {
+			$(cbt[2]).attr('src', 'img/product_tab3.png');
+		});
+
+		$(cbt[3]).mouseover(function() {
+			$(cbt[3]).attr('src', 'img/product_tab4_2.png');
+		});
+		$(cbt[3]).mouseout(function() {
+			$(cbt[3]).attr('src', 'img/product_tab4.png');
+		});
+
+		var a_slide_count = 0;
+		var a_slide_px = -247;
+		var asbt = document.getElementsByClassName('asbt');
+
+		a_slide_event()
+
+		$(asbt[0]).click(function() {
+			$(".asblock").stop().animate({
+				left : a_slide_px * 0
+			});
+		});
+		$(asbt[1]).click(function() {
+			$(".asblock").stop().animate({
+				left : a_slide_px * 1
+			});
+		});
+		$(asbt[2]).click(function() {
+			$(".asblock").stop().animate({
+				left : a_slide_px * 2
+			});
+		});
+		$(asbt[3]).click(function() {
+			$(".asblock").stop().animate({
+				left : a_slide_px * 3
+			});
+		});
+
+		function a_slide_event() {
+			point_all_gray2();
+			$(".asblock").stop().animate({
+				left : a_slide_px * a_slide_count + 'px'
+			})
+			$(asbt[a_slide_count]).css({
+				'background-color' : "#ff6900",
+				'width' : "20px"
+			});
+		}
+		;
+
+		function point_all_gray2() {
+			$(asbt[0]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+			$(asbt[1]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+			$(asbt[2]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+			$(asbt[3]).css({
+				'background-color' : "rgba(93, 93, 93, 0.5)",
+				'width' : "12px"
+			});
+		}
+
+		$(asbt[0]).click(function() {
+			a_slide_count = 0;
+			a_slide_event();
+		});
+		$(asbt[1]).click(function() {
+			a_slide_count = 1;
+			a_slide_event();
+		});
+		$(asbt[2]).click(function() {
+			a_slide_count = 2;
+			a_slide_event();
+		});
+		$(asbt[3]).click(function() {
+			a_slide_count = 3;
+			a_slide_event();
+		});
+
+		var its_slide_px = -312;
+		var itsbt = document.getElementsByClassName('itsbt');
+		var itbgc = setInterval(its_slide_event, 2500);
+		var its_slide_count = 0;
+
+		its_slide_event()
+
+		function its_slide_event() {
+			point_all_orange2();
+			$(itsbt[its_slide_count]).css({
+				'background-color' : "rgba(255,105,0, 0.5)"
+			});
+			if (its_slide_count == 0) {
+				$(".itemslide").stop().animate({
+					left : its_slide_px * its_slide_count + 'px'
+				}, 500);
+			} else if (its_slide_count == 1) {
+				$(".itemslide").stop().animate({
+					left : its_slide_px * its_slide_count + 'px'
+				}, 500);
+			} else if (its_slide_count == 2) {
+				$(".itemslide").stop().animate({
+					left : its_slide_px * its_slide_count + 'px'
+				}, 500);
+				its_slide_count = -1;
+			}
+			its_slide_count++;
+		}
+		;
+
+		function point_all_orange2() {
+			$(itsbt[0]).css({
+				'background-color' : "rgba(255, 255, 255, 0.5)"
+			});
+			$(itsbt[1]).css({
+				'background-color' : "rgba(255, 255, 255, 0.5)"
+			});
+			$(itsbt[2]).css({
+				'background-color' : "rgba(255, 255, 255, 0.5)"
+			});
+		}
+		;
+
+		$(itsbt[0]).click(function() {
+			its_slide_count = 0;
+			its_slide_event();
+		});
+		$(itsbt[1]).click(function() {
+			its_slide_event();
+		});
+		$(itsbt[2]).click(function() {
+			its_slide_event();
+		});
+
+		var menuli = document.getElementsByClassName('menulili');
+		var submenu = document.getElementsByClassName('submenu')[0]
+
+		$(menuli[0]).mouseover(function() {
+			$(".submenu_wrap").stop().slideDown();
+		});
+		$(menuli[0]).mouseout(function() {
+			$(".submenu_wrap").stop().slideUp();
+		});
+		$(menuli[1]).mouseover(function() {
+			$(".submenu_wrap").stop().slideDown();
+		});
+		$(menuli[1]).mouseout(function() {
+			$(".submenu_wrap").stop().slideUp();
+		});
+		$(menuli[2]).mouseover(function() {
+			$(".submenu_wrap").stop().slideDown();
+		});
+		$(menuli[2]).mouseout(function() {
+			$(".submenu_wrap").stop().slideUp();
+		});
+		$(menuli[3]).mouseover(function() {
+			$(".submenu_wrap").stop().slideDown();
+		});
+		$(menuli[3]).mouseout(function() {
+			$(".submenu_wrap").stop().slideUp();
+		});
+		$(menuli[4]).mouseover(function() {
+			$(".submenu_wrap").stop().slideDown();
+		});
+		$(menuli[4]).mouseout(function() {
+			$(".submenu_wrap").stop().slideUp();
+		});
+		$(submenu).mouseover(function() {
+			$(".submenu_wrap").stop().show();
+		});
+		$(submenu).mouseout(function() {
+			$(".submenu_wrap").stop().slideUp();
+		});
+
+	});
+</script>
+</html>
