@@ -13,3 +13,4 @@ CSS 그리드 기능 사용하여 크롬 브라우저 최적화
 jQuery 사용하여 슬라이드 구현
 
 <h3>:point_right: 바로가기</h3>
+http://yunam92.dothome.co.kr/samyang/
